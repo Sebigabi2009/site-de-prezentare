@@ -1,0 +1,177 @@
+/* Stilizare generala */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration:inherit;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color:whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+a {
+    font-size: 16px;
+}
+
+/* Main */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color:brown;
+}
+
+#servicii {
+    margin-bottom: 50px;
+}
+
+#servicii h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#servicii ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#servicii li {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#servicii li:last-child {
+    margin-right: 0;
+}
+
+#servicii a {
+    display: block;
+    padding: 20px;
+    background-color:grey;
+    color:white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#servicii a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#portofoliu {
+    margin-bottom: 50px;
+}
+
+#portofoliu h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galerie img {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+/* Contact */
+#contact {
+    margin-bottom: 50px;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color:whitesmoke;}
+.footer     {
+    background-color:darkgray;
+    color:fuchsia;
+    padding: 20px;
+}
+  footer p {
+    margin: 0;
+    text-align: center;
+  }

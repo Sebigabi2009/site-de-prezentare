@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Titlul paginii tale</title>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="acasa.html">Acasă</a></li>
+				<li><a href="despre.html">Despre noi</a></li>
+				<li><a href="servicii.html">Servicii</a></li>
+				<li><a href="contacte.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="intro">
+			<h1>Bun venit pe site-ul nostru!</h1>
+			<p>Site-ul nostru oferă cele mai bune servicii web.</p>
+			<a href="#contact" class="button">Contactează-ne</a>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<form>
+				<label for="nume">Nume:</label>
+				<input type="text" id="nume" name="nume" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="mesaj">Mesaj:</label>
+				<textarea id="mesaj" name="mesaj" required></textarea>
+
+				<button type="submit">Trimite</button>
+			</form>
+		</section>
+
+	</main>
+	<footer>
+		<p>&copy; 2023 Site-ul nostru</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
