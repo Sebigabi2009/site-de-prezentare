@@ -1,140 +1,207 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Exemplu Pagină HTML</title>
-	<style>
-		body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+<title>Despre noi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: black;
+  line-height: 1.8;
 }
 
-a {
-    text-decoration:inherit;
-    color: #333;
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* Header */
-header {
-    background-color:whitesmoke;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/w3images/parallax1.jpg');
+  min-height: 100%;
 }
 
-nav {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
 }
 
-ul {
-    list-style: none;
-    display: flex;
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
 }
 
-li {
-    margin-right: 20px;
-}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
 
-li:last-child {
-    margin-right: 0;
-}
-
-a {
-    font-size: 16px;
-}
-
-	/* stilizarea coloanelor */
-	.col-1, .col-2, .col-3 {
-		float: left;
-		width: 33.33%;
-		height:auto;
-		background-color:white;
-		text-align: center;
-		margin-top: 1px;
-		font-size: 20px;
-		padding-top: 50px;
-		box-sizing: border-box;
-		overflow: auto;
-	}
-
-	/* stilizarea ferestrei de comentarii */
-	.comment-section {
-		width: 100%;
-		height:auto;
-		background-color: #d9d9d9;
-		padding: 20px;
-		box-sizing: border-box;
-		margin: 20px 0;
-		clear: both; /* forțează următorul element să înceapă pe o nouă linie */
-	}
-
-	/* stilizarea ferestrei cu patru coloane */
-	.col-4 {
-		float: left;
-		width: 25%;
-		height: 150px;
-		background-color: #f2f2f2;
-		text-align: center;
-		font-size: 20px;
-		padding-top: 50px;
-	}
-	.footer     {
-    background-color:darkgray;
-    color:fuchsia;
-    padding: 20px;
-}
-  footer p {
-    margin: 0;
-    text-align: center;
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
   }
-	</style>
+}
+</style>
 </head>
 <body>
-	<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="acasa.html">Acasă</a></li>
-				<li><a href="despre.html">Despre noi</a></li>
-				<li><a href="servicii.html">Servicii</a></li>
-				<li><a href="contacte.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="col-1"><img src="poza5.jpg" ></div>
-	<div class="col-2">
-		<p> O scurta descriere</p>
-		<h>Ne dorim ca serviciile de web design oferite clientului sa fie impecabile, prompte si adaptate cererii pietei. Suntem mereu la curent cu toate noutatile in ceea ce priveste acest domeniu complex de web design, grafica si SEO.<h/>
-		
-		<p>Bineinteles ca prioritatea noastra este satisfacerea tuturor cerintelor clientului si mai mult decat atat, ne dorim sa surprindem asteptarile acestuia! Cuvintele sunt de prisos in acest caz, prin urmare va invitam sa rasfoiti portofoliul cu proiectele noastre.</p>
-	</div>
-	<div class="col-3"><p>Experienta</p>
-<h>Echipa noastra are in componenta web designeri cu experienta</h>
 
-<p>Experienta cu limbaje de programare.</p>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> DESPRE NOI</a>
+    
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
 
-<h> HTML/CSS</h>
-
-<p>WordPress</p>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">DESPRE NOI</a>
+    
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    
+  </div>
 </div>
-	<div class="comment-section">
-		<h2>Comentarii</h2>
-		<form>
-			<label for="comment">Adaugă un comentariu:</label>
-			<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-			<br>
-			<input type="submit" value="Trimite">
-		</form>
-	</div>
-	<div class="col-4"><p><a href="poza5.jpg">PAGINI DE PREZENTARE</a></p></div>
-	<div class="col-4"><p><a href="poza5.jpg">MAGAZINE ONLINE</a></p></div>
-	<div class="col-4"><p><a href="poza5.jpg">LOGO AND GRAPHIC DESIGN</a></p></div>
-	<div class="col-4"><p><a href="poza5.jpg">PROMOVARE SEO</a></p></div>
-	<footer>
-		<p>&copy; 2023 Site-ul nostru</p>
-	</footer>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <img src="despre.jpg">
+  <br>
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <br>
+    <br>
+    <br>
+    <h1>CLINICA  ZIMBETULUI  TAU</h1>
+    
+    
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">DESPRE NOI</h3>
+  <p class="w3-center"><em>Iubim un zimbet sanatos</em></p>
+  <P>Suntem o echipă de medici entuziaști, gata să răspundă cu promptitudine nevoilor tale! Suntem mereu la curent cu noile metode de tratament, materiale, dar și tehnici, pentru a va oferi întotdeauna cele mai bune servicii de stomatologie. Ne bucurăm să punem zâmbete pe chipurile oamenilor și să vedem satisfacția lor în momentul în care părăsesc clinica. Împreună am pus bazele clinicii Dr. M, iar la momentul actual dispunem de mai multe cabinete individuale, echipate cu aparatură modernă, de ultimă generație, ce permit tratarea simultană a pacienților, pentru a reduce timpul de așteptare. Împreună creăm zâmbetele perfecte!</P>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Ma numesc</b></p><br>
+      <img src="poza5.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <P>Dotări moderne</P>
+      <P>zâmbete perfecte!</P>
+      <p>Deoarece ne dorim tot ce este mai bun pentru pacienții noștri, am creat o clinică în care îți punem la dispoziție atât confortul necesar cât și cele mai actuale echipamente medicale. Câteva dintre dotările oferite de clinica Dr. X sunt:</p>
+      <br>
+
+      <p>Echipament premium de sterilizare ”Autoclav”</p>
+      <p>Cameră intraorală</p>
+      <p>Scaune moderne</p>
+      <p>Aparatură de ultimă generație</p>
+      <p>Materiale profesionale
+
+</p>
+    </div>
+  </div>
+  
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">PENTRU A NE CONTACTA</h3>
+  <p class="w3-center"><em>Mai multe obtiuni!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+
+     
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Craiova.Dolj<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Telefon:0123456789<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Mai jos puteti trimite un mesaj</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> TRIMITE MESAJ
+        </button>
+      </form>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000000.0!2d23.825320!3d44.309804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM0jCsDU0JzM4LjUiTiAyM8KwMzknMzkuNSJF!5e0!3m2!1sen!2sus!4v1621267645438!5m2!1sen!2sus" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+      
+    </div>
+  </div>
+</div>
+
+ 
+<script>
+
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
 </html>

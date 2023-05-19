@@ -1,71 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Titlul paginii tale</title>
-	<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-center {
+  float: center;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.service {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.service:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+#page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imagine.jpg"); /* sau orice alta imagine */
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:f7f7f7;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color:darkcyan;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-center {
+  float: center;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.service {
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.service:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+#page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imagine.jpg"); /* sau orice alta imagine */
+}
+/* Stilizare pentru footer */
+      footer {
+        background-color:darkcyan;
+        padding: 20px;
+        text-align: center;
+      }
+
+</style>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="acasa.html">Acasă</a></li>
-				<li><a href="despre.html">Despre noi</a></li>
-				<li><a href="servicii.html">Servicii</a></li>
-				<li><a href="contacte.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<main>
-		<section id="intro">
-			<h1>Bun venit pe site-ul nostru!</h1>
-			<p>Site-ul nostru oferă cele mai bune servicii web.</p>
-			<a href="#contact" class="button">Contactează-ne</a>
-		</section>
 
-		<section id="servicii">
-			<h2>Serviciile noastre</h2>
-			<ul>
-				<li><a href="#">Web design</a></li>
-				<li><a href="#">Dezvoltare web</a></li>
-				<li><a href="#">Gazduire web</a></li>
-				<li><a href="#">SEO</a></li>
-			</ul>
-		</section>
+<div class="container">
+  
+  </div>
+  <div id="navbar">
+  <a href="#" id="logo">Cabinet stomatologic</a>
+  <div id="navbar-right">
+    <a class="active" href="acasa.html">Home</a>
+    <a href="servicii.html">Proceduri si servicii stomatologice</a>
+    <a href="despre.html">Despre noi</a>
+    
 
-		<section id="portofoliu">
-			<h2>Portofoliu</h2>
-			<div class="galerie">
-				<img src="poza1.jpg" alt="Proiect 1">
-				<img src="poza2.jpg" alt="Proiect 2">
-				<img src="poza3.jpg" alt="Proiect 3">
-				<img src="poza4.jpg" alt="Proiect 4">
-			</div>
-		</section>
+  </div>
 
-		<section id="contact">
-			<h2>Contact</h2>
-			<form>
-				<label for="nume">Nume:</label>
-				<input type="text" id="nume" name="nume" required>
+  
+</div>
+  <section id="services" class="section">
+  <div class="container">
+    
+    <h1>Bun venit la Cabinetul Stomatologic</h1>
+  <p>Oferim servicii stomatologice de calitate într-un mediu prietenos și confortabil. Vă așteptăm cu drag!</p>
+    <div class="services-container">
+      <div class="service">
+        <img src="poza7.jpg" alt="Service 1">
+        <h3>Extractii dentare</h3>
+        <p>Executăm extracții dentare simple sau complicate în condiții optime.</p>
+      </div>
+      <div class="service">
+        <img src="poza3.jpg" alt="Service 2">
+        <h3>Profilaxie dentară</h3>
+        <p>Efectuăm igienizarea dentară profesională pentru prevenirea cariilor și a afecțiunilor gingivale.</p>
+      </div>
+      <div class="service">
+        <img src="poza2.jpg" alt="Service 3">
+        <h3>Tratamente endodontice</h3>
+        <p>Realizăm tratamente endodontice complexe, asigurând salvarea dintelui afectat.</p>
+      </div>
+      <div class="service">
+        <img src="poza4.jpg" alt="Service 4">
+        <h3>Coroane dentare</h3>
+        <p>Executăm coroane dentare pe suport de zirconiu sau metalice, cu estetică și rezistență deosebite.</p>
+      </div>
+      <div class="service">
+        <img src="poza1.jpg" alt="Service 1">
+        <h3>Chirurgia orala</h3>
+        <p>Chirurgia orala si maxilo-faciala este specialitatea stomatologica ce are in vedere cercetarea etiologiei, patogeniei, clinicii, diagnosticului, tratamentului si profilaxiei afectiunilor teritoriului oro – maxilo – facial ce solicita metode de tratament chirurgical si totodata se preocupa de elaborarea acestor metode.</p>
+      </div>
+      <div class="service">
+        <img src="poza8.jpg" alt="Service 1">
+        <h3>Tratament albire dinti</h3>
+        <p>Tratamentul de albire dentara este unul dintre cele mai solicitate servicii de estetica dentara, acest fapt fiind o reactie a importantei tot mai mare pe care societatea contemporana o acorda infatisarii exterioare. Cu atat mai mult albirea dintilor este o procedura solicitata de persoanele supuse atentiei ochiului public.</p>
+      </div>
+      <div class="service">
+        <img src="poza9.jpg" alt="Service 1">
+        <h3>Tipuri de anestezie dentara</h3>
+        <p>Anestezia locala inseamna pierderea reversibila a senzatiei in cimpul operator, prin administrarea de drog anestezic in acea zona. Dezavantajul consta in faptul ca este rezervata unor interventii de mica amploare.</p>
+      </div>
+      <div class="service">
+        <img src="poza10.jpg" alt="Service 1">
+        <h3>Pansament calmant</h3>
+        <p>Pansamentul calmant reprezinta tratamentul de urgenta al pulpitei acute, prin care se aplica un pansament cu anestezic la nivelul unui dinte dureros, urmand a se interveni cu tratamentul endodontic, respectiv pulpectomie – extirpare vitala, intr-o sedinta ulterioara.</p>
+      </div>
+      <div class="service">
+        <img src="poza11.jpg" alt="Service 1">
+        <h3>Tratament stomatologic de urgenta</h3>
+        <p>Urgentele stomatologice sunt la fel de importante ca orice alta problema medicala si trebuie sa avem grija sa nu le neglijam, deoarece se pot produce sechele permanente sau pot necesita tratamente mai complexe si mult mai costisitoare.</p>
+      </div>
+      <div class="service">
+        <img src="poza12.jpg" alt="Service 1">
+        <h3>Incizie si drenaj abces dentar</h3>
+        <p>Abcesul dentar reprezinta o infectie acuta ce se manifesta prin acumularea de puroi in tesuturile moi ale cavitatii bucale, afectiunea necesitand tratament de urgenta. Interventia consta in incizia abcesului si drenarea colectiei infectate. Simptomele abcesului sunt durere pulsatila, tumefactie si congestie, jena la masticatie, plus stare generala proasta, cu febra si insomnie.</p>
+      </div>
+    </div>
+  </div>
+  <section id="team" class="section">
+  <div class="container">
+    <h2>Echipa noastră</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="poza5.jpg" alt="Membra echipa 1">
+        <h3>Dr.Popescu Popescu
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div id="page-background"></div>
 
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
+</section>
+</section>
+ <script>
+              // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+              window.onscroll = function () { scrollFunction() };
 
-				<label for="mesaj">Mesaj:</label>
-				<textarea id="mesaj" name="mesaj" required></textarea>
+              function scrollFunction() {
+                  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                      document.getElementById("navbar").style.padding = "30px 10px";
+                      document.getElementById("logo").style.fontSize = "25px";
+                  } else {
+                      document.getElementById("navbar").style.padding = "80px 10px";
+                      document.getElementById("logo").style.fontSize = "35px";
+                  }
+              }
 
-				<button type="submit">Trimite</button>
-			</form>
-		</section>
-	</main>
+const pageBackground = document.getElementById("page-background");
+const button = document.getElementById("button");
 
-	<footer>
-		<p>&copy; 2023 Site-ul nostru</p>
-	</footer>
+button.addEventListener("click", function() {
+  pageBackground.style.backgroundColor = "#FFA07A";
+});
 
-	<script src="script.js"></script>
+          </script>
+          
+
+
+
+
+   
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000000.0!2d23.825320!3d44.309804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM0jCsDU0JzM4LjUiTiAyM8KwMzknMzkuNSJF!5e0!3m2!1sen!2sus!4v1621267645438!5m2!1sen!2sus" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+
+
+ <!-- Footer -->
+</iframe>
+    <footer>
+      <p>Programari la tel.: 0123456789</p>
+      <p>Email: contact@clinicastomatologie.ro</p>
+      <p>Adresa noastra </p>
+      <p>Program: luni-vineri, 09:00-17:00</p>
+    </footer>
+
 </body>
 </html>
